@@ -19,4 +19,26 @@ function fibs(num) {
 	return fibSeq;
 }
 
-export { fibs };
+/* -----------------------------------------
+--Fibonacci Sequence using recursion-- */
+function fibsRec(num) {
+	if (typeof num !== "number") {
+		return "Input needs to be a number!";
+	}
+	if (num < 2) {
+		return "Input needs to be at least 2!";
+	}
+	// Base Case
+	if (num === 2) {
+		return [0, 1];
+	}
+	// Recursively call the function until the base case was reached.
+	const fibSeq = fibsRec(num - 1);
+
+	const fibNum = fibSeq[fibSeq.length - 1] + fibSeq[fibSeq.length - 2];
+	fibSeq.push(fibNum);
+
+	return fibSeq;
+}
+
+export { fibs, fibsRec };
