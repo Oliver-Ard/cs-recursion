@@ -18,7 +18,6 @@ function printIterationFib() {
 	console.log("----------------");
 }
 printIterationFib();
-
 // Print the Fibonacci Sequence using Recursion:
 function printRecursionFib() {
 	console.log("Recursion:");
@@ -29,7 +28,7 @@ function printRecursionFib() {
 	console.log("Print 6 Fibonacci numbers:");
 	console.log(fibsRec(6));
 	console.log("----------------");
-	console.log("Print 8 Fibonacci numbers:");
+	console.log("Print 9 Fibonacci numbers:");
 	console.log(fibsRec(9));
 	console.log("----------------");
 	console.log("Print 13 Fibonacci numbers:");

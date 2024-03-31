@@ -2,12 +2,22 @@
 -----------------------------------------
 --Fibonacci Sequence using iteration-- */
 function fibs(num) {
-	if (typeof num !== "number") {
-		return "Input needs to be a number!";
+	switch (true) {
+		case typeof num !== "number": {
+			return "Input needs to be a number!";
+		}
+		case num < 0: {
+			return "Input needs to be a positive integer!";
+		}
+		case num === 0: {
+			return [];
+		}
+		case num === 1: {
+			return [0];
+		}
+		// no default
 	}
-	if (num < 2) {
-		return "Input needs to be at least 2!";
-	}
+
 	// The Fibonacci Sequence starts with 0 and 1.
 	const fibSeq = [0, 1];
 	let fibNum;
@@ -22,11 +32,20 @@ function fibs(num) {
 /* -----------------------------------------
 --Fibonacci Sequence using recursion-- */
 function fibsRec(num) {
-	if (typeof num !== "number") {
-		return "Input needs to be a number!";
-	}
-	if (num < 2) {
-		return "Input needs to be at least 2!";
+	switch (true) {
+		case typeof num !== "number": {
+			return "Input needs to be a number!";
+		}
+		case num < 0: {
+			return "Input needs to be a positive integer!";
+		}
+		case num === 0: {
+			return [];
+		}
+		case num === 1: {
+			return [0];
+		}
+		// no default
 	}
 	// Base Case
 	if (num === 2) {
